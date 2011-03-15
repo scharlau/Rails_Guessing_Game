@@ -48,7 +48,10 @@ class GamesController < ApplicationController
     @game = Game.new(params[:game])
   
     @messsage = compare_numbers(params[:game][:your_guess], params[:game][:the_number])
-
+    
+     guesses_left = params[:game][:guesses].to_i
+     params[:game][:guesses] = guesses_left -1
+     
      if @message == 'you win' 
       then params[:game][:won] = true
       @game.won = true
@@ -75,14 +78,20 @@ class GamesController < ApplicationController
     
       @messsage = compare_numbers(params[:game][:your_guess], params[:game][:the_number])
       
+          
+       guesses_left = params[:game][:guesses].to_i
+       params[:game][:guesses] = guesses_left -1
+       
       if @message == 'you win' then
       params[:game][:won] = true
-      
       else
       params[:game][:won] = false
-       
       end
      
+      if  params[:game][:guesses] == 0 then
+      @message = 'GAME OVER'
+      end
+
 
     respond_to do |format|
     if @game.update_attributes(params[:game])
