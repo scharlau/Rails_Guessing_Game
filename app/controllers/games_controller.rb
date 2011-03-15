@@ -47,7 +47,8 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(params[:game])
   
-    @messsage = compare_numbers
+    @messsage = compare_numbers(params[:game][:your_guess], params[:game][:the_number])
+
      if @message == 'you win' 
       then params[:game][:won] = true
       @game.won = true
