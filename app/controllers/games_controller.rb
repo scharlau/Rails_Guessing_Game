@@ -45,7 +45,7 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.xml
   def create
-    @game = Game.new(params[:game])
+    @game = Game.new(game_params)
   
     @messsage = compare_numbers(params[:game][:your_guess], params[:game][:the_number])
     
@@ -133,6 +133,14 @@ class GamesController < ApplicationController
 	return @message
   end
 
+private
+
+private
+
+  def game_params
+    params.require(:game).permit(:the_number, :your_guess, :guesses)
+      
+  end
  
   
 end
