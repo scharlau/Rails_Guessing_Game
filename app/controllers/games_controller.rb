@@ -39,20 +39,20 @@ class GamesController < ApplicationController
   # GET /games/1/edit
   def edit
     @game = Game.find(params[:id])
-    
+
   end
 
   # POST /games
   # POST /games.xml
   def create
     @game = Game.new(game_params)
-  
+
     @messsage = compare_numbers(params[:game][:your_guess], params[:game][:the_number])
-    
+
      guesses_left = params[:game][:guesses].to_i
      params[:game][:guesses] = guesses_left -1
-     
-     if @message == 'you win' 
+
+     if @message == 'you win'
       then params[:game][:won] = true
       @game.won = true
       else
@@ -75,27 +75,27 @@ class GamesController < ApplicationController
   # PUT /games/1.xml
   def update
     @game = Game.find(params[:id])
-    
+
       @messsage = compare_numbers(params[:game][:your_guess], params[:game][:the_number])
-      
-          
+
+
        guesses_left = params[:game][:guesses].to_i
        params[:game][:guesses] = guesses_left -1
-       
+
       if @message == 'you win' then
       params[:game][:won] = true
       else
       params[:game][:won] = false
       end
-     
+
       if  params[:game][:guesses] == 0 then
       @message = 'GAME OVER'
       end
 
 
     respond_to do |format|
-    if @game.update_attributes(params[:game])
-     
+    if @game.update(game_params)
+
         format.html { redirect_to(@game, :notice => @message) }
         format.xml  { head :ok }
       else
@@ -116,19 +116,19 @@ class GamesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
+
   def compare_numbers(your_guess,the_number)
-  	
+
 	message = "hello"
-	
+
 	response = @game.compare(your_guess, the_number)
-	case 
-	when response == 'true' then message = "you win" 
+	case
+	when response == 'true' then message = "you win"
 	when response == 'higher' then message = "my number is higher"
 	when response == 'lower' then message = "my number is lower"
 	else message = 'wrong'
 	end
-	
+
 	@message = message
 	return @message
   end
@@ -139,8 +139,8 @@ private
 
   def game_params
     params.require(:game).permit(:the_number, :your_guess, :guesses)
-      
+
   end
- 
-  
+
+
 end
