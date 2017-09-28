@@ -1,4 +1,4 @@
-=== The Rails Guessing Game ===
+#The Rails Guessing Game
 This is a simple Rails version of the guessing
 game in Ruby found at
 https://github.com/scharlau/RubyPractice/tree/master/02/guess. We now want to
@@ -16,7 +16,7 @@ logic has moved to the games_controller.rb file. The views have been modified a
 little to show more of what's happening in the database, but have otherwise are
 what is provided by Rails scaffolding.
 
-== Running the Game ===
+## Running the Game
 When you create a new 'game' you create a new row in the
 database and need to enter your 'guess'. When you click 'create game' your guess
 is compared to the random number and the result shown. If you want to 'guess'
@@ -27,7 +27,7 @@ your work, decide whether this is something that is best done in a new branch of
 git, so that you can then merge it back to the main branch when done, or give
 you the option of deleting the branch if it doesn't go smoothly.
 
-==What to do next ==
+##What to do next
 First round, fix the game so that it correctly tells you if
 you won. Second round, make the forms only show, and allow to edit, only what
 they need to play the game. Third round, fix anything else, which you think
