@@ -18,11 +18,14 @@ what is provided by Rails scaffolding.
 
 ## To get started ##
 Clone the github repo by opening a terminal and moving to the directory above where the repo should reside. For example, if I want it in 'railsapps/rails_guessing_game' then I should be in 'railsapps' and issue this command:
+
     git clone git@github.com:scharlau/Rails_Guessing_Game.git
 
 This will then download the repo and create the 'Rails_Guessing_Game' directory for me. Then I can move into that directory with the terminal and run the command:
+
     bundle install
 to build the app then run
+
     rake db:migrate
 to create the database before I start the server and see what's going on with the code.
 
