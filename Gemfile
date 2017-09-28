@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '4.2.0'
+gem 'rails', '5.0.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -15,7 +15,14 @@ gem 'rails', '4.2.0'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-# gem 'ruby-debug19'
+# gem 'ruby-debug19'\
+gem 'puma', '~> 3.0'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.2'
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -27,9 +34,20 @@ gem 'rails', '4.2.0'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'sqlite3-ruby', :require=> 'sqlite3'
+  gem 'sqlite3'
+  gem 'byebug', platform: :mri
 end
 
-group :production do
- gem 'pg'
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+#uncomment this if you want to move to Heroku
+# group :production do
+#  gem 'pg'
+# end
