@@ -43,6 +43,6 @@ git, so that you can then merge it back to the main branch when done, or give
 you the option of deleting the branch if it doesn't go smoothly.
 
 ## What to do next ##
-First round, fix the game so that it correctly tells you if you won.
-Second round, make the forms only show, and allow to edit, only what they need to play the game.
-Third round, fix anything else, which you think could be done better.
+1. Fix the game so that it correctly tells you if you won.
+2. Make the forms only show, and allow to edit, only what they need to play the game.
+3. Fix anything else, which you think could be done better.
