@@ -16,7 +16,7 @@ use this to develop a Rails version for use online. This will help us better und
 
 For this game we still have the game.rb model as before, and some of the game
 logic has moved to the games_controller.rb file. The views have been modified a
-little to show more of what's happening in the database, but have otherwise are
+little to show more of what's happening in the database, but are otherwise
 what is provided by Rails scaffolding.
 
 ## To get started ##
@@ -46,4 +46,4 @@ you the option of deleting the branch if it doesn't go smoothly.
 ## What to do next ##
 1. Fix the game so that it correctly tells you if you won.
 2. Make the forms only show, and allow to edit, only what they need to play the game.
-3. Fix anything else, which you think could be done better.
+3. Fix anything else, which you think could be done better. If you need suggestions, then use https://github.com/whitesmith/rubycritic to help get you started.
