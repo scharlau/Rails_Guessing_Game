@@ -1,10 +1,6 @@
 # The Rails Guessing Game #
-This is a simple Rails version of the guessing
-game in Ruby found at
-https://github.com/scharlau/RubyPractice/tree/master/02/guess. We now want to
-use this to develop a Rails version for use online. This will help us better understand Rails apps with models.
 
-As before, this is a 'Deliberate Practice' session. So there is no
+This is a 'Deliberate Practice' session. So there is no
 one 'correct' solution. The goal of the session is to take the time to work with
 someone else if possible, or on your own, to explore how you might make the code
 better than it is. This is a prototype, a learning tool, so has some parts which
@@ -12,6 +8,11 @@ should be improved upon both in the way logic is handled, and in the design of
 the pages.
 
 This 'deliberate practice' repo includes only a bare bones solution. You have working code. What you don't have is 'great working code'. Your goal is to leave this with 'better' working code. You'll find useful information at http://guides.rubyonrails.org about Rails apps in general. You can also look at http://api.rubyonrails.org for more detailed into about methods as required.
+
+This is a simple Rails version of the guessing
+game in Ruby found at
+https://github.com/scharlau/RubyPractice/tree/master/02/guess. We now want to
+use this to develop a Rails version for use online. This will help us better understand Rails apps with models.
 
 For this game we still have the game.rb model as before, and some of the game
 logic has moved to the games_controller.rb file. The views have been modified a
