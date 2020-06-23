@@ -27,6 +27,9 @@ Clone the github repo by opening a terminal and moving to the directory above wh
 This will then download the repo and create the 'Rails_Guessing_Game' directory for me. Then I can move into that directory with the terminal and run the command:
 
     bundle install
+    rails webpacker:install
+    yarn install --missing files
+    
 to build the app then run
 
     rake db:migrate

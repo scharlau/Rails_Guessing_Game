@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '5.0.6'
+gem 'rails', '6.0.3.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -19,10 +19,11 @@ gem 'rails', '5.0.6'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'webpacker', '~> 4.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0'
 
 # Bundle the extra gems:
 # gem 'bj'
@@ -34,7 +35,7 @@ gem 'coffee-rails', '~> 4.2'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development, :test do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3'
   gem 'byebug', platform: :mri
 end
 
