@@ -16,7 +16,7 @@ gem 'rails', '6.0.3.1'
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
 # gem 'ruby-debug19'\
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'webpacker', '~> 4.0'
